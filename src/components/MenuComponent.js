@@ -10,8 +10,13 @@ class Menu extends Component {
         this.state = {
             selectedDish: null
         }
+        console.log("constructor invoked")
     }
 
+    componentDidMount(){
+        console.log("cdm invoked")
+
+    }
     onDishSelect(dish) {
         this.setState({ selectedDish: dish});
     }
@@ -47,6 +52,7 @@ class Menu extends Component {
               </div>
             );
         });
+        console.log("render invoked")
 
         return (
             <div className="container">
